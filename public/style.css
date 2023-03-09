@@ -5,7 +5,7 @@ body{
     gap: 2vh;
     font-family: sans-serif;
     min-width: 70vw;
-    
+    padding-bottom: 5vh;
 }
 
 .searchbar{
@@ -128,7 +128,7 @@ img::before{
    display: flex;
    flex-direction: column;
    gap: 5vh;
-   padding-bottom: 5vh;
+   
 }
 
 .stats_icons{
@@ -136,7 +136,7 @@ img::before{
     flex-wrap: wrap;
     justify-content: center;  
     align-items: center;
-    height: 20vh;
+    height: 20%;
     gap: 2vw;
     
 }
@@ -201,7 +201,7 @@ img::before{
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     outline: 1px dotted black;
     background-color: #f3f3f3;;
