@@ -1,0 +1,207 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    font-family: sans-serif;
+    min-width: 70vw;
+    
+}
+
+.searchbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: auto;
+    background-image: url('./images/header.jpg');
+    background-position: center;
+    background-size: contain;
+    box-shadow: 0 3px 3px black;
+    position: relative;
+}
+
+.searchbar_labelcontainer{
+    width: 47%;
+    color: antiquewhite;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: left;
+   
+}
+
+.searchbar_input{
+    height: 25%;
+    width: 50%;
+    font-size: 2.25rem;
+    text-align: center;
+    appearance: none;
+    outline: 3px solid black;
+    border: none;
+    border-radius: 25px;
+    background-color: #0f172a;
+    color:antiquewhite;
+    
+}
+
+.searchbar_input:focus::placeholder{
+    color: transparent;
+}
+
+.searchbar_btn{
+    position: absolute;
+    right: 21vw;
+    bottom: 30%;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.searchbar_icon{
+    height: 35px;
+    width: 35px;
+    filter: brightness(0) invert(.7);
+}
+
+
+/*  */
+img::before{
+    content: '';
+    background-image: url('./images/none.png');
+}
+
+.imgs{
+    height: 80vh;
+    width: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+    cursor: pointer;
+}
+
+.imgs_gpuchip{
+    max-height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.imgs_sides{
+    display: flex;
+    height: 30%;
+    width: 70%;
+    overflow-y: auto;
+    justify-content: space-between; 
+    gap: 5%;
+}
+
+.imgs_gpu,.imgs_back{
+   max-width: 50%;
+   max-height: 90%;
+   transition: transform .5s;
+    
+}
+
+.imgs_rear,.imgs_io,.imgs_frontpcb,.imgs_backpcb,.imgs_top, .imgs_bottom{
+    max-height: 100%;
+    max-width: 100%;
+    transition: transform .5s;
+}
+
+
+.imgs_gpu:hover,.imgs_back:hover,.imgs_rear:hover,.imgs_io:hover,.imgs_frontpcb:hover,.imgs_backpcb:hover,.imgs_top:hover, .imgs_bottom:hover{
+    transform: scale(1.1);
+}
+
+
+/*  */
+.stats{
+   display: flex;
+   flex-direction: column;
+   gap: 5vh;
+   padding-bottom: 5vh;
+}
+
+.stats_icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    align-items: center;
+    height: 20vh;
+    gap: 2vw;
+    
+}
+
+.processor, .cores, .tmus, .rops, .memory_size, .memory_type, .bus_width{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40%;
+    min-width: 5%;
+    background-color: #f3f3f3;
+    border: 1px solid #bbb;
+    padding: 1%;
+    box-shadow: 3px 3px 3px grey;
+   
+}
+.processor_val, .cores_val, .tmus_val, .rops_val, .memory_size_val, .memory_type_val, .bus_width_val{
+    font-size: 150%;
+}
+
+.stats_icons_labels{
+    font-size: .65rem;
+    color: #78716c;
+}
+
+.stats_list{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    gap: 2vw;
+}
+
+
+.stats_list_inner{
+    display: flex;
+    flex-direction: column;
+    max-width: 20vw;
+    height: auto;
+    
+    
+}
+
+.stats_header{
+    background-color: #458;
+    color: blanchedalmond;
+    min-height: 5vh;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    outline: 1px solid black;
+    box-shadow: 3px 3px 3px black;
+    padding: 2%;
+    text-align: center;
+}
+
+.stats_list_inner > div{
+    min-height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    outline: 1px dotted black;
+    background-color: #f3f3f3;;
+    box-shadow: 3px 3px 3px black;
+    padding: 2%;
+}

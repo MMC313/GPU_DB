@@ -1,0 +1,146 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>GPU Data base</title> 
+</head>
+<body>
+   <form class="searchbar">
+        <div class="searchbar_labelcontainer">
+            <label class="searchbar_label" for="searchbar_input">Find a GPU:</label>
+        </div>
+        <input class="searchbar_input" name="search" type="text" placeholder="Example: NVIDIA GeForce RTX 4090">
+        <button class="searchbar_btn"><img class="searchbar_icon" src="./icons/search.svg" alt=""></button>
+   </form>
+   <div class="imgs">
+        <h1 class="imgs_title"></h1>
+        <div class="imgs_gpuchip">
+            <img class="imgs_gpu" src="" alt="GPU Front" onclick="window.open(src)" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'">
+            <img class="imgs_back" src="" alt="GPU Back" onclick="window.open(src)" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'">
+        </div>
+        <div class="imgs_sides">
+            <img class="imgs_frontpcb" src="" alt="GPU FRONT PCB" onclick="window.open(src)" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'">
+            <img class="imgs_backpcb" src="" alt="GPU BACK PCB" onclick="window.open(src)" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'">
+            <img class="imgs_top" src="" alt="GPU TOP" onclick="window.open(src)" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'">
+            <img class="imgs_bottom" src="" alt="GPU BOTTOM" onclick="window.open(src)" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'">
+            <img class="imgs_rear" src="" alt="GPU REAR" onclick="window.open(src)" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'">
+            <img class="imgs_io" src="" alt="GPU IO" onclick="window.open(src)" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'">
+        </div>
+   </div>
+   <div class="stats">
+        <div class="stats_icons">
+            <div class="processor">
+                <div class="processor_val"></div>
+                <div class="stats_icons_labels" >GRAPHICS PROCESSOR</div>
+            </div>
+            <div class="cores">
+                <div class="cores_val"></div>
+                <div class="stats_icons_labels">CORES</div>
+            </div>
+            <div class="tmus">
+                <div class="tmus_val"></div>
+                <div class="stats_icons_labels" >TMUS</div>
+            </div>
+            <div class="rops">
+                <div class="rops_val"></div>
+                <div class="stats_icons_labels">ROPS</div>
+            </div>
+            <div class="memory_size">
+                <div class="memory_size_val"></div>
+                <div class="stats_icons_labels" >MEMORY SIZE</div>
+            </div>
+            <div class="memory_type">
+                <div class="memory_type_val"></div>
+                <div class="stats_icons_labels" >MEMORY TYPE</div>
+            </div>
+            <div class="bus_width">
+                <div class="bus_width_val"></div>
+                <div class="stats_icons_labels" >BUS WIDTH</div>
+            </div>
+        </div>
+        <div class="stats_list">
+            <div class="stats_list_inner">   
+                <h3 class="stats_header">Graphics Processor</h3>
+                <div class="stats_name"></div>
+                <div class="stats_variant"></div>
+                <div class="stats_architecture"></div>
+                <div class="stats_foundry"></div>
+                <div class="stats_processSize"></div>
+                <div class="stats_transistors"></div>
+                <div class="stats_dieSize"></div>
+
+            </div>
+
+            <div class="stats_list_inner">  
+                <h3 class="stats_header">Graphics Card</h3>
+                <div class="stats_release"></div>
+                <div class="stats_generation"></div>
+                <div class="stats_pre"></div>
+                <div class="stats_suc"></div>
+                <div class="stats_prod"></div>
+                <div class="stats_price"></div>
+                <div class="stats_bus"></div>
+            </div>
+
+            <div class="stats_list_inner">  
+                <h3 class="stats_header">Clock Speeds</h3>
+                <div class="stats_base"></div>
+                <div class="stats_boost"></div>
+                <div class="stats_memClock"></div>
+            </div>
+
+            <div class="stats_list_inner">  
+                <h3 class="stats_header">Memory</h3>
+                <div class="stats_memorySize"></div>
+                <div class="stats_memoryType"></div>
+                <div class="stats_memoryBus"></div>
+                <div class="stats_bandwidth"></div>
+            </div>
+
+            <div class="stats_list_inner">  
+                <h3 class="stats_header">Render Config</h3>
+                <div class="stats_shadingUnits"></div>
+                <div class="stats_tmus"></div>
+                <div class="stats_rops"></div>
+                <div class="stats_l1Cache"></div>
+                <div class="stats_l2Cache"></div>
+            </div>
+
+            <div class="stats_list_inner">  
+                <h3 class="stats_header">Theoretical Performance</h3>
+                <div class="stats_pixelRate"></div>
+                <div class="stats_textureRate"></div>
+                <div class="stats_fp16"></div>
+                <div class="stats_fp32"></div>
+                <div class="stats_fp64"></div>
+            </div>
+
+            <div class="stats_list_inner">  
+                <h3 class="stats_header">Graphics Features</h3>
+                <div class="stats_directx"></div>
+                <div class="stats_opengl"></div>
+                <div class="stats_opencl"></div>
+                <div class="stats_vulkan"></div>
+            </div>
+
+            <div class="stats_list_inner">  
+                <h3 class="stats_header">Board Design</h3>
+                <div class="stats_slotWidth"></div>
+                <div class="stats_length"></div>
+                <div class="stats_width"></div>
+                <div class="stats_height"></div>
+                <div class="stats_tdp"></div>
+                <div class="stats_suggestedPsu"></div>
+                <div class="stats_outputs"></div>
+                <div class="stats_powerConnectors"></div>
+                <div class="stats_boardNumber"></div>
+            </div>
+
+        </div>
+   </div>
+   <script src="./app.js" defer></script>
+</body>
+</html>
