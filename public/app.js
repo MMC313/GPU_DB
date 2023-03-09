@@ -64,7 +64,7 @@ const statsConnectors = document.querySelector('.stats_powerConnectors')
 const statsBoard = document.querySelector('.stats_boardNumber')
 
 
-const baseUrl = "http://gpu-db.onrender.com/results?"
+const baseUrl = "https://gpu-db.onrender.com/results?"
 const options= {
     method: 'GET'
 }
