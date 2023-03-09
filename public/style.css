@@ -13,13 +13,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: 20vh;
     width: auto;
     background-image: url('./images/header.jpg');
     background-position: center;
     background-size: contain;
     box-shadow: 0 3px 3px black;
-    position: relative;
+    position: sticky;
+    top: 0;
 }
 
 .searchbar_labelcontainer{
@@ -34,7 +35,7 @@ body{
 .searchbar_input{
     height: 25%;
     width: 50%;
-    font-size: 2.25rem;
+    font-size: 1.75rem;
     text-align: center;
     appearance: none;
     outline: 3px solid black;
@@ -50,8 +51,8 @@ body{
 }
 
 .searchbar_btn{
-    position: absolute;
-    right: 21vw;
+    position: relative;
+    left: 27%;
     bottom: 30%;
     appearance: none;
     border: none;
