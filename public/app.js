@@ -91,6 +91,8 @@ async function loadImages(){
     let gpuID = apiData.url.split(".c")
 
     gpuName.innerHTML = apiData.gpu_name
+    loadTitleColor()
+
     gpuFront.src = `https://tpucdn.com/gpu-specs/images/c/${gpuID[2]}-front.jpg`
     gpuBack.src = `https://tpucdn.com/gpu-specs/images/c/${gpuID[2]}-back.jpg`
     gpuFrontPcb.src = `https://tpucdn.com/gpu-specs/images/c/${gpuID[2]}-pcb-front.jpg`
@@ -171,6 +173,8 @@ async function loadInitialImages(){
     let gpuID = apiData.url.split(".c")
 
     gpuName.innerHTML = apiData.gpu_name
+    loadTitleColor()
+
     gpuFront.src = `https://tpucdn.com/gpu-specs/images/c/${gpuID[2]}-front.jpg`
     gpuBack.src = `https://tpucdn.com/gpu-specs/images/c/${gpuID[2]}-back.jpg`
     gpuFrontPcb.src = `https://tpucdn.com/gpu-specs/images/c/${gpuID[2]}-pcb-front.jpg`
@@ -245,6 +249,12 @@ async function loadInitialStats(){
 
 }
 
+
+function loadTitleColor(){
+    if(gpuName.textContent.includes("NVIDIA")) gpuName.style.color = "lawngreen"
+    if(gpuName.textContent.includes("AMD")|| gpuName.textContent.includes("ATI")) gpuName.style.color = "red"
+    if(gpuName.textContent.includes("Intel")) gpuName.style.color = "aqua"
+}
 
 loadInitialImages()
 loadInitialStatIcons()
