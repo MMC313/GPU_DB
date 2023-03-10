@@ -169,7 +169,7 @@ async function loadStats(){
 
 async function loadInitialImages(){
 
-    let apiData = await loadInfo("NVIDIA GeForce RTX 4090")
+    let apiData = await loadInfo("AMD Radeon RX 6900 XT")
     let gpuID = apiData.url.split(".c")
 
     gpuName.innerHTML = apiData.gpu_name
@@ -186,7 +186,7 @@ async function loadInitialImages(){
 }
 
 async function loadInitialStatIcons(){
-    let apiData = await loadInfo("NVIDIA GeForce RTX 4090")
+    let apiData = await loadInfo("AMD Radeon RX 6900 XT")
 
     processorIcon.innerHTML = apiData.graphics_processor.gpu_name
     coreIcon.innerHTML = apiData.render_config.shading_units
@@ -199,7 +199,7 @@ async function loadInitialStatIcons(){
 }
 
 async function loadInitialStats(){
-    let apiData = await loadInfo("NVIDIA GeForce RTX 4090")
+    let apiData = await loadInfo("AMD Radeon RX 6900 XT")
 
     statsName.innerHTML = "<b>GPU Name: </b>"+ apiData.graphics_processor.gpu_name
     statsVariant.innerHTML = "<b>GPU Variant:</b>"+ apiData.graphics_processor.gpu_variant
@@ -251,9 +251,21 @@ async function loadInitialStats(){
 
 
 function loadTitleColor(){
-    if(gpuName.textContent.includes("NVIDIA")) gpuName.style.color = "lawngreen"
-    if(gpuName.textContent.includes("AMD")|| gpuName.textContent.includes("ATI")) gpuName.style.color = "red"
-    if(gpuName.textContent.includes("Intel")) gpuName.style.color = "aqua"
+    if(gpuName.textContent.includes("NVIDIA")){
+        gpuName.style.color = "lawngreen"
+        gpuName.style.outline = "1px solid lawngreen"
+    }else
+    if(gpuName.textContent.includes("AMD")|| gpuName.textContent.includes("ATI")){
+        gpuName.style.color = "red"
+        gpuName.style.outline = "1px solid red"
+    }else
+    if(gpuName.textContent.includes("Intel")){
+        gpuName.style.color = "aqua"
+        gpuName.style.outline = "1px solid aqua"
+    }else{
+        gpuName.style.color = "orange"
+        gpuName.style.outline = "1px solid orange"
+    } 
 }
 
 loadInitialImages()
