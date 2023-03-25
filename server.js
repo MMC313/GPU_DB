@@ -9,12 +9,10 @@ app.use(cors())
 //routes
 app.use(express.static('public'))
 
-
 // Renders my index.html as the homepage on http://localhost:3000/
 app.get('/', (req,res)=>{
   res.render(__dirname +'/index.html')
 })
-
 
 //Connects to my MongoDB API
 app.get('/results', (req,res)=>{
@@ -29,9 +27,7 @@ app.get('/results', (req,res)=>{
       'api-key': 'EeEfMQnJocksl1TPpW2J8h9YnwIuGpfkVuFhpVrNYbKswltZoIjvVyLL331WLBfZ',
     },
     data: loadInfo(queryData)
-};
-
-
+  };
 
 // Using the pipeline parameter allows me to use the Lucene Standard Analyzer to search through the database
   function loadInfo(x){
