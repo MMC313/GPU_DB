@@ -1,3 +1,5 @@
+
+
 body{
     margin: 0;
     display: flex;
@@ -5,7 +7,8 @@ body{
     gap: 2vh;
     font-family: sans-serif;
     min-width: 70vw;
-    box-shadow: inset 0 0 20px black;
+    box-shadow: inset 0 0 10px black;
+    
     
 }
 
@@ -14,15 +17,15 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 17vh;
-    width: auto;
     background-image: url('./images/header.jpg');
     background-position: center;
     background-size: contain;
     box-shadow: 0 3px 3px black;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 3;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     
 }
 
@@ -30,29 +33,37 @@ body{
     position: absolute;
     width: auto;
     height: 80%;
-    left: 3%;
+    left: 3%;   
 
 }
 .searchbar_labelcontainer{
-    width: 47%;
     color: white;
-    font-size: 1.5rem;
+    font-size: 5vw;
     display: flex;
     justify-content: left;
+    margin-bottom: 1vh;
+    width: 75vw;
    
 }
 
+.searchbar_inputcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 .searchbar_input{
-    height: 25%;
-    width: 50%;
-    font-size: 1.75rem;
+    height: auto;
+    width: 75vw;
+    font-size: 4vw;
     text-align: center;
     appearance: none;
-    outline: 3px solid black;
+    
     border: none;
-    border-radius: 25px;
-    background-color: #0f172a;
+    background-color: #000000cf;
     color:antiquewhite;
+    border-bottom: 1px solid #f3f3f3;
     
 }
 
@@ -61,19 +72,21 @@ body{
 }
 
 .searchbar_btn{
-    position: relative;
-    left: 27%;
-    bottom: 33%;
     appearance: none;
     border: none;
     background-color: transparent;
     cursor: pointer;
-    height: 4%;
-    width: 4%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+
 }
 
 .searchbar_icon{
     filter: brightness(0) invert(.7);
+    width: 4vw;
+    
 }
 
 
@@ -84,7 +97,6 @@ img::before{
 }
 
 .imgs{
-    height: 80vh;
     width: auto;
     margin-left: 5%;
     margin-right: 5%;
@@ -92,45 +104,45 @@ img::before{
     align-items: center;
     flex-direction: column;
     gap: 1vh;
-    cursor: pointer;
+    
     
 }
 
 .imgs_title{
     padding: 2vh;
     background-color: black;
-    border-radius: 10vh;
+    border-radius: 2vw;
     box-shadow: 3px 3px 3px black;
+    font-size: 5vw;
+    text-align: center;
 }
 
 .imgs_gpuchip{
-    max-height: 50%;
     width: auto;
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: center;
+    gap: 1vw;
 }
 
 .imgs_sides{
     display: flex;
-    height: 30%;
-    width: 70%;
+    width: 70vw;
     overflow-y: hidden;
     justify-content: space-between; 
     gap: 5%;
 }
 
+
 .imgs_gpu,.imgs_back{
-   max-width: 50%;
-   max-height: 90%;
+   max-width: 46vw;
    transition: transform .5s;
-    
+   cursor: pointer;
 }
 
 .imgs_rear,.imgs_io,.imgs_frontpcb,.imgs_backpcb,.imgs_top, .imgs_bottom{
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 25vw;
     transition: transform .5s;
+    cursor: pointer;
 }
 
 
@@ -144,6 +156,7 @@ img::before{
    display: flex;
    flex-direction: column;
    gap: 5vh;
+   
 }
 
 .stats_icons{
@@ -180,12 +193,11 @@ img::before{
 
 .stats_list{
     display: flex;
-    flex-wrap:wrap;
+    flex-direction: column;
     justify-content: center;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    gap: 1vw;
-    padding-bottom: 5vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vh;
     
 }
 
@@ -193,15 +205,15 @@ img::before{
 .stats_list_inner{
     display: flex;
     flex-direction: column;
-    max-width: 20vw;
     height: auto;
-    
+    margin-bottom: 2vw;
+    flex-wrap: wrap;
     
 }
 
 .stats_header{
-    background-image: linear-gradient(125deg, #0f172a,#64748b);
-    color: blanchedalmond;
+    background-image: linear-gradient(125deg, #0f172a,#4d5b70);
+    color:#f3f3f3;
     height: 5vh;
     font-size: 1.1rem;
     display: flex;
@@ -224,4 +236,53 @@ img::before{
     background-color: #f3f3f3;;
     box-shadow: 3px 3px 3px black;
     padding: 2%;
+}
+
+@media (min-width: 600px){
+    .searchbar_labelcontainer{
+        font-size: 2vw;
+        width: 60vw;
+    }
+
+    .searchbar_input{
+        font-size: 2vw;
+        width: 60vw;
+    }
+
+    .searchbar_icon{
+        width: 2vw;
+    }
+
+    .imgs_title{
+        font-size: 2vw;
+        border-radius: 1vw;
+    }
+
+    .imgs_gpu,.imgs_back{
+        max-width: 30vw;
+     }
+
+    .imgs_rear,.imgs_io,.imgs_frontpcb,.imgs_backpcb,.imgs_top, .imgs_bottom{
+        max-height: 15vw;
+    }
+
+    .stats_list{
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 1vw;
+    }
+
+    .stats_list_inner{
+        width: 30vw;
+        margin-bottom: 0;
+    }
+        
+}
+
+@media (min-width: 1000px){
+
+    .stats_list_inner{
+        font-size: 1.25vw;
+        width: 20vw;
+    }
 }
