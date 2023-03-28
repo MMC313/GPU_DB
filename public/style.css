@@ -12,11 +12,10 @@ body{
     
 }
 
-.searchbar{
+.header{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-image: url('./images/header.jpg');
     background-position: center;
     background-size: contain;
@@ -24,8 +23,17 @@ body{
     position: sticky;
     top: 0;
     z-index: 3;
+}
+
+.searchbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
     padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-bottom: 1vh;
     
 }
 
@@ -59,7 +67,6 @@ body{
     font-size: 4vw;
     text-align: center;
     appearance: none;
-    
     border: none;
     background-color: #000000cf;
     color:antiquewhite;
@@ -90,6 +97,10 @@ body{
 }
 
 
+.github{
+    width: 12vw;
+}
+
 /*  */
 img::before{
     content: '';
@@ -112,6 +123,7 @@ img::before{
     padding: 2vh;
     background-color: black;
     border-radius: 2vw;
+    -webkit-border-radius: 2vw;
     box-shadow: 3px 3px 3px black;
     font-size: 5vw;
     text-align: center;
@@ -253,6 +265,11 @@ img::before{
         width: 2vw;
     }
 
+    .github{
+        width: 5vw;
+
+    }
+
     .imgs_title{
         font-size: 2vw;
         border-radius: 1vw;
@@ -281,6 +298,18 @@ img::before{
 
 @media (min-width: 1000px){
 
+    .header{
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    .github{
+        margin-right: 1vw;
+    }
+
+    .searchbar{
+        margin-right: 13vw;
+    }
     .stats_list_inner{
         font-size: 1.25vw;
         width: 20vw;
