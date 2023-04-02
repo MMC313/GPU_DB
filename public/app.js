@@ -64,7 +64,7 @@ const statsConnectors = document.querySelector('.stats_powerConnectors')
 const statsBoard = document.querySelector('.stats_boardNumber')
 
 
-const baseUrl = "https://gpu-db.onrender.com/results?"
+const baseUrl = "https://neographics.netlify.app/results?"
 const options= {
     method: 'GET'
 }
