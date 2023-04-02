@@ -64,7 +64,7 @@ const statsConnectors = document.querySelector('.stats_powerConnectors')
 const statsBoard = document.querySelector('.stats_boardNumber')
 
 
-const baseUrl = "neographics.up.railway.app/results?"
+const baseUrl = "https://neographics.up.railway.app/results?"
 const options= {
     method: 'GET'
 }
