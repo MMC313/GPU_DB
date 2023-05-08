@@ -11,8 +11,7 @@ a webapp to look up card design, hi-res images of the PCB and specs related to t
 
 ## Deployment
 
--https://gpu-db.onrender.com/
-(Give it a minute for resources to spin up)
+https://neographics.up.railway.app
 
 ## Built With
 
