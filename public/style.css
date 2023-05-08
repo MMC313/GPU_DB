@@ -6,6 +6,8 @@
 body{
     margin: 0;
     display: flex;
+    justify-content: center;
+   
     flex-direction: column;
     gap: 2vh;
     font-family: sans-serif;
@@ -42,6 +44,7 @@ body{
 
 .search_header{
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     position: sticky;
@@ -51,8 +54,8 @@ body{
     opacity: 90%;
     outline: 1px solid black;
     box-shadow: 0 3px 3px black;
-    margin-right: 10vw;
-    margin-left: 10vw;
+    margin-right: 12vw;
+    margin-left: 12vw;
 }
 
 .searchbar{
@@ -72,7 +75,7 @@ body{
     display: flex;
     justify-content: left;
     margin-bottom: 1vh;
-    width: 75vw;
+    width: 60vw;
    
 }
 
@@ -85,7 +88,7 @@ body{
 
 .searchbar_input{
     height: auto;
-    width: 75vw;
+    width: 60vw;
     font-size: 4vw;
     text-align: center;
     appearance: none;
@@ -320,6 +323,19 @@ img::before{
 }
 
 @media (min-width: 1000px){
+
+    .searchbar_input{
+       
+        width: 55vw;
+        font-size: 1.5vw;
+       
+        
+    }  
+
+    .searchbar_labelcontainer{
+        width: 55vw;
+        font-size: 1.5vw;
+    }
 
     .website_name{
         font-size: 3vw;
