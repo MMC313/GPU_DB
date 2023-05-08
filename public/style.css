@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: "neuro";
+    src: url(./fonts/neuropol/NEUROPOL.ttf);
+}
 
 body{
     margin: 0;
@@ -14,15 +17,42 @@ body{
 
 .header{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    padding-left: 3vw;
+    padding-right: 3vw;
     background-image: url('./images/header.jpg');
     background-position: center;
     background-size: contain;
     box-shadow: 0 3px 3px black;
+    position: relative;
+    font-family: "neuro";
+}
+
+.logo{
+    width: 12vw;
+    height: 12vw;
+}
+
+
+.website_name{
+    color: white;
+    font-size: 5vw;
+}
+
+.search_header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     position: sticky;
     top: 0;
     z-index: 3;
+    background-color: #0f172a;
+    opacity: 90%;
+    outline: 1px solid black;
+    box-shadow: 0 3px 3px black;
+    margin-right: 10vw;
+    margin-left: 10vw;
 }
 
 .searchbar{
@@ -30,22 +60,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    
     padding-top: 2vh;
     padding-bottom: 1vh;
     
 }
 
-.logo{
-    position: absolute;
-    width: auto;
-    height: 80%;
-    left: 3%;   
 
-}
 .searchbar_labelcontainer{
-    color: white;
+    color:#f3f3f3;
     font-size: 5vw;
     display: flex;
     justify-content: left;
@@ -68,9 +90,10 @@ body{
     text-align: center;
     appearance: none;
     border: none;
-    background-color: #000000cf;
-    color:antiquewhite;
+    background-color: transparent;
+    color: #f3f3f3;
     border-bottom: 1px solid #f3f3f3;
+    outline: none;
     
 }
 
@@ -91,7 +114,7 @@ body{
 }
 
 .searchbar_icon{
-    filter: brightness(0) invert(.7);
+    filter: brightness(0) invert(1);
     width: 4vw;
     
 }
@@ -298,18 +321,21 @@ img::before{
 
 @media (min-width: 1000px){
 
-    .header{
-        flex-direction: row;
-        justify-content: end;
+    .website_name{
+        font-size: 3vw;
     }
+
+    .logo{
+        width: 7vw;
+        height: 7vw;
+    }
+
 
     .github{
         margin-right: 1vw;
     }
 
-    .searchbar{
-        margin-right: 13vw;
-    }
+
     .stats_list_inner{
         font-size: 1.25vw;
         width: 20vw;
